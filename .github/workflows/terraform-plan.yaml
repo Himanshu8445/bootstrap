@@ -1,0 +1,22 @@
+# name: terraform plan
+
+# on: [pull_request, workflow_dispatch]
+
+# jobs:
+#   terraform-plan-centralus-dev:
+#     #if: ${{false}}
+#     name: centralus-dna-plan-dev
+#     #uses: FedEx/terraform-workflows/.github/workflows/terraform-plan.yaml@v1
+#     uses: FedEx/eai-3538701-common/.github/workflows/terraform-plan.yaml@main
+#     secrets:
+#       GITHUB_APP_ID: ${{ secrets.GLOBAL_PROD_GIT_CLONE_ID }}
+#       GITHUB_APP_KEY: ${{ secrets.GLOBAL_PROD_GIT_CLONE_PRIVATE_KEY }}
+#       GITHUB_APP_INSTALL_ID: ${{ secrets.GLOBAL_PROD_GIT_CLONE_INSTALLATION_ID }}
+#       AZUREAD_CLIENT_ID: ${{ secrets.TF_VAR_APPLICATION_ID }}
+#       AZUREAD_CLIENT_SECRET: ${{ secrets.TF_VAR_SP_SECRET }}
+#       TF_VAR_SUBSCRIPTION_ID: ${{ secrets.TF_VAR_SUBSCRIPTION_ID }}
+#       TF_VAR_TENANT_ID: ${{ secrets.TF_VAR_TENANT_ID }}
+#     with:
+#       var_file: Parameters/Dev/auth.dev.tfvars,Parameters/Dev/storage.dev.tfvars,Parameters/Dev/rg.dev.tfvars
+#       backend_config_file: Parameters/Dev/backend.dev.tfvars
+#       runner: ubuntu-latest

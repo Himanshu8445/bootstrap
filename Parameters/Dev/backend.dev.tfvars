@@ -1,0 +1,6 @@
+subscription_id      = "be7051ef-9485-4207-b746-9f6a24b3cc8a"
+tenant_id            = "72f988bf-86f1-41af-91ab-2d7cd011db47"
+resource_group_name  = "tftstaterg"
+storage_account_name = "tfstatestracc"
+container_name       = "tfstate-container"
+key                  = "bootstrap.tfstate"
