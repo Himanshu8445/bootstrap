@@ -1,5 +1,5 @@
 module "resourcegroup" {
-  source          = "git::https://github.com/Himanshu8445/common//resourcegroup?ref=main"
+  source          = "https://github.com/Himanshu8445/common/tree/main/resourcegroup"
   resource_groups = var.resource_groups
 }
 
