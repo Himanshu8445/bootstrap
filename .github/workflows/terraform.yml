@@ -52,7 +52,7 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
       uses: hashicorp/terraform-github-actions@master
-      needs: Terraform Plan
+      #needs: Terraform Plan
       with:
         tf_actions_version: 0.14.8
         tf_actions_subcommand: 'apply'
