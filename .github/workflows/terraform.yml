@@ -33,25 +33,22 @@ jobs:
       with:
         tf_actions_version: 0.14.8
         tf_actions_subcommand: 'init'
-        var_file: Parameters/Dev/auth.dev.tfvars,Parameters/Dev/storage.dev.tfvars,Parameters/Dev/rg.dev.tfvars
-        backend_config_file: Parameters/Dev/backend.dev.tfvars
+        tf_actions_working_dir: "./"
  
     - name: 'Terraform Validate'
       uses: hashicorp/terraform-github-actions@master
       with:
         tf_actions_version: 0.14.8
         tf_actions_subcommand: 'validate'
-        var_file: Parameters/Dev/auth.dev.tfvars,Parameters/Dev/storage.dev.tfvars,Parameters/Dev/rg.dev.tfvars
-        backend_config_file: Parameters/Dev/backend.dev.tfvars
+        tf_actions_working_dir: "./"
          
     - name: 'Terraform Plan'
       uses: hashicorp/terraform-github-actions@master
       with:
         tf_actions_version: 0.14.8
         tf_actions_subcommand: 'plan'
-        var_file: Parameters/Dev/auth.dev.tfvars,Parameters/Dev/storage.dev.tfvars,Parameters/Dev/rg.dev.tfvars
-        backend_config_file: Parameters/Dev/backend.dev.tfvars
- 
+        tf_actions_working_dir: "./"
+        
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
       uses: hashicorp/terraform-github-actions@master
@@ -59,5 +56,4 @@ jobs:
       with:
         tf_actions_version: 0.14.8
         tf_actions_subcommand: 'apply'
-        var_file: Parameters/Dev/auth.dev.tfvars,Parameters/Dev/storage.dev.tfvars,Parameters/Dev/rg.dev.tfvars
-        backend_config_file: Parameters/Dev/backend.dev.tfvars
+        tf_actions_working_dir: "./"
